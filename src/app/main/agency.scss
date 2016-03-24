@@ -93,6 +93,10 @@ h1, h2, h3, h4, h5, h6 {
     &.active {
       color: darken($brand-primary, 10%);
     }
+
+    .logo-top {
+      width: 50px;
+    }
 	}
 	.navbar-collapse {
 		border-color: fade(white, 2%);
@@ -163,11 +167,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 header {
-	background-image: url('../assets/images/header-bg.jpg');
-	background-repeat: none;
+	background-image: url('../assets/images/header-bg-01.png');
+	background-repeat: no-repeat;
 	background-attachment: scroll;
-	background-position: center center;
-	@include background-cover;
+	background-position: top center;
+	// @include background-cover;
+
 	text-align: center;
 	color: white;
 	.intro-text {
@@ -193,8 +198,14 @@ header {
 @media(min-width:768px) {
 	header {
 		.intro-text {
-			padding-top: 300px;
+			padding-top: 100px;
 			padding-bottom: 200px;
+
+      .intro-logo {
+        img {
+          width: 200px;
+        }
+      }
 			.intro-lead-in {
 				@include serif-font;
 				font-style: italic;
@@ -208,6 +219,7 @@ header {
 				font-size: 75px;
 				line-height: 75px;
 				margin-bottom: 50px;
+        margin-top: 10px;
 			}
 		}
 	}
